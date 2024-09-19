@@ -37,10 +37,10 @@
                 </li>
             </ul>
         </nav>
-        <div class="hamburger-menu" onclick="toggleMenu()">
-            <span></span>
-            <span></span>
-            <span></span>
+        <div class="hamburger-menu" id="hamburger-menu">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
         </div>
     </header>
     <main>
@@ -121,14 +121,17 @@
             <a href="#">About Our Food</a>
         </div>
         <div class="credit">
-            Created By <a href=""><span>Alexourus</span></a> | All Rigths Reserved
+            Created By <a href="https://github.com/Alexourus"><span>Alexourus</span></a>
         </div>
     </footer>
     <script>
-        function toggleMenu() {
-            const nav = document.querySelector('.main-nav');
-            nav.classList.toggle('active');
-        }
+        const hamburgerMenu = document.getElementById('hamburger-menu');
+        const mainNav = document.querySelector('.main-nav');
+
+        hamburgerMenu.addEventListener('click', () => {
+            hamburgerMenu.classList.toggle('open');
+            mainNav.classList.toggle('open');
+        });
     </script>
 </body>
 </html>
