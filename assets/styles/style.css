@@ -79,7 +79,6 @@ section{
     align-items: center;
     justify-content: space-between;
     padding: 0 7%;
-    
 }
 .main-header-logo{
     height: 7rem;
@@ -94,6 +93,41 @@ section{
 .main-nav-item a:hover{
     border-color: var(--second-color);
     padding-bottom: 0.5rem;
+}
+.hamburger-menu {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 3rem;
+    height: 2rem;
+}
+.hamburger-menu span {
+    width: 100%;
+    height: 0.4rem;
+    background-color: var(--second-color);
+    transition: all 0.3s ease;
+}
+@media (max-width: 768px) {
+    .main-nav {
+        display: none;
+        position: absolute;
+        top: 7rem;
+        right: 0;
+        background-color: var(--white-color);
+        width: 100%;
+        text-align: right;
+    }
+    .main-nav.active {
+        display: block;
+    }
+    .main-nav-item {
+        display: block;
+        margin: 1.5rem 0;
+    }
+    .hamburger-menu {
+        display: flex;
+    }
 }
 /*Header Finish*/
 #first-sc{
@@ -129,9 +163,8 @@ section{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
     gap: 1.5rem;
-  }
-  
-  .menu .box-container .box {
+}
+.menu .box-container .box {
     padding: 3rem;
     background-color: #fff;
     border-radius: 3rem;
@@ -141,45 +174,40 @@ section{
     flex-direction: column;
     align-items: flex-start;
     justify-content: space-between;
-  }
-  
-  .menu .box-container .box img {
+}
+.menu .box-container .box img {
     width: 100%;
     object-fit: cover;
-  }
-  
-  .menu .box-container .box .menu-category {
+}
+.menu .box-container .box .menu-category {
     font-size: 1.2rem;
     text-transform: lowercase;
-  }
-  
-  .menu .box-container .box h3 {
+} 
+.menu .box-container .box h3 {
     font-size: 3rem;
     padding: 1rem 0;
-  }
-  
-  .menu .box-container .box .price {
+}
+.menu .box-container .box .price {
     font-size: 2.5rem;
     padding: 0.5rem 0;
-  }
-  
-  .menu .box-container .box .price span {
+}  
+.menu .box-container .box .price span {
     font-size: 1.5rem;
     text-decoration: line-through;
     font-weight: 300;
-  }
-  footer{
+}
+footer{
     background-color: var(--black-color);
     text-align: center;
-  }
-  .footer-logo{
+}
+.footer-logo{
     margin: 2rem;
     height: 7rem;
-  }
-  .share{
+}
+.share{
     padding: 2rem 0;
-  }
-  .share a{
+}
+.share a{
     width: 5rem;
     height: 5rem;
     line-height: 5rem;
@@ -188,44 +216,72 @@ section{
     border: 0.2rem solid var(--white-color);
     border-radius: 50%;
     margin: 0.3rem;
-  }
-  .share a:hover{
+}
+.share a:hover{
     background-color: var(--first-color);
     color: var(--second-color);
     border: 0.2rem solid var(--first-color);
-  }
-  .links{
+}
+.links{
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     gap: 1rem;
-  }
-  .links a{
+}
+.links a{
    background-color: var(--first-color);
    padding: 0.7rem 2rem;
    color: var(--black-color);
    font-size: 2rem;
-  }
-  .links a{
-    background-color: var(--first-color);
-    padding: 0.7rem 2rem;
-    color: var(--black-color);
+   border-radius: 1rem;
+}
+.links a:hover{
+    background-color: var(--white-color);
+    color: var(--second-color);
+}
+.credit{
     font-size: 2rem;
-    border-radius: 1rem;
+    color: var(--white-color);
+    font-weight: 300;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+.credit span{
+    color: var(--first-color);
+}
+
+@media (max-width: 768px) {
+    html {
+        font-size: 55%;
     }
-    .links a:hover{
-        background-color: var(--white-color);
-        color: var(--second-color);
+    .main-header {
+        padding: 0 5%;
     }
-    .credit{
-        font-size: 2rem;
-        color: var(--white-color);
-        font-weight: 300;
-        padding-top: 1.5rem;
-        padding-bottom: 1.5rem;
-        
+    #first-sc {
+        flex-direction: column;
+        text-align: center;
     }
-    .credit span{
-        color: var(--first-color);
+    .content {
+        max-width: 100%;
     }
-    
+
+    .content h3 {
+        font-size: 4rem;
+    }
+
+    .content p {
+        font-size: 1.6rem;
+    }
+    .image img {
+        height: auto;
+        width: 100%;
+        padding: 0;
+    }
+    .menu .box-container {
+        grid-template-columns: 1fr; 
+    }
+    .btn {
+        font-size: 1.6rem;
+        padding: 1rem 1.5rem;
+    }
+}

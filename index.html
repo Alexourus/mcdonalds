@@ -37,6 +37,11 @@
                 </li>
             </ul>
         </nav>
+        <div class="hamburger-menu" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
     </header>
     <main>
         <section id="first-sc" >
@@ -119,5 +124,11 @@
             Created By <a href=""><span>Alexourus</span></a> | All Rigths Reserved
         </div>
     </footer>
+    <script>
+        function toggleMenu() {
+            const nav = document.querySelector('.main-nav');
+            nav.classList.toggle('active');
+        }
+    </script>
 </body>
 </html>
